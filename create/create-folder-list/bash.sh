@@ -5,4 +5,4 @@ while read -r line; do
 		directory=$(echo "$line" | cut -d " " -f2)
 		mkdir "$directory"
 	fi
-done <test.txt
+done <"$1"
