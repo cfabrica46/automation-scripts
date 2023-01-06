@@ -29,7 +29,7 @@ fi
 
 while read -r line; do
 	if [[ $line =~ ^[0-9]. ]]; then
-		name=$(echo "$line" | cut -d " " -f2)
+		name=$(echo "$line" | cut -d " " -f2 | sed -r 's/[/]/-/g' | tr '[:upper:]' '[:lower:]')
 
 		if [ "$opt" -eq 1 ]; then
 			if [ -z "$3" ]; then
