@@ -42,3 +42,9 @@ while read -r line; do
 		fi
 	fi
 done <"$2"
+
+if [ "$opt" -eq 1 ]; then
+	echo "Files created!!! :D"
+else
+	echo "Directories created!!! :D"
+fi
